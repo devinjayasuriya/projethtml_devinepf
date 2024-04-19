@@ -1,0 +1,165 @@
+body {
+    background: rgb(2, 30, 41);
+    color: white;
+}
+
+h4 {
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    text-transform: none;
+}
+
+main {
+    margin: 0 50px;
+}
+
+header h1 {
+    font-family: "Yeseva One", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h1 span {
+    color: rgb(13, 233, 167);
+}
+
+header,
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 8%;
+}
+
+.fa-linkedin,
+.fa-instagram,
+.fa-github {
+    color: white;
+}
+
+div p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    color: gray;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+section p {
+    margin: 0 5px;
+    padding: 5px;
+    display: inline-flex;
+    flex-direction: row;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    color: rgb(255, 255, 255);
+}
+
+section p span {
+    background-color: transparent;
+    padding: 5px 10px;
+}
+
+.highlight {
+    background-color: rgb(13, 233, 167);
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(120, 120, 121);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .photos {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 10px;
+    }
+
+    .fa-linkedin,
+    .fa-instagram,
+    .fa-github {
+        color: white;
+        flex-basis: 8%;
+    }
+
+    .photos img {
+        width: 100%;
+        height: auto;
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    section p {
+        margin: 5px;
+        /* Réduire l'espace entre les paragraphes contenant les mots */
+    }
+
+    section p span {
+        font-size: 12px;
+    }
+
+    footer p {
+        font-size: 10px;
+    }
+
+    main article div p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .photos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+
+    .fa-linkedin,
+    .fa-instagram,
+    .fa-github {
+        color: white;
+        flex-basis: 8%;
+    }
+
+    .photos img {
+        width: 100%;
+        height: auto;
+    }
+
+    .photos img:nth-child(n+10) {
+        display: none;
+    }
+
+    section p span {
+        font-size: 10px;
+        margin: 5px;
+    }
+
+    footer p {
+        font-size: 8px;
+    }
+
+    main article div p {
+        font-size: 10px;
+    }
+}
