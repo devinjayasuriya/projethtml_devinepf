@@ -29,12 +29,13 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-basis: 8%;
+    flex-basis: 5%;
 }
 
 .fa-linkedin,
 .fa-instagram,
-.fa-github {
+.fa-github,
+.fa-circle-half-stroke {
     color: white;
 }
 
@@ -75,23 +76,34 @@ section p span {
 
 footer {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     font-family: "Montserrat", sans-serif;
     color: rgb(120, 120, 121);
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+
     .photos {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-gap: 10px;
+        grid-gap: 5px;
+    }
+
+    header,
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-basis: 10%;
     }
 
     .fa-linkedin,
     .fa-instagram,
-    .fa-github {
+    .fa-github,
+    .fa-circle-half-stroke {
         color: white;
-        flex-basis: 8%;
+        flex-wrap: wrap;
     }
 
     .photos img {
@@ -108,11 +120,11 @@ footer {
 
     section p {
         margin: 5px;
-        /* Réduire l'espace entre les paragraphes contenant les mots */
     }
 
     section p span {
         font-size: 12px;
+        flex-basis: 4%;
     }
 
     footer p {
@@ -125,17 +137,29 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
+
+    header,
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-basis: 20%;
+    }
+
     .photos {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 10px;
+        grid-gap: 5px;
+        flex-wrap: wrap;
     }
 
     .fa-linkedin,
     .fa-instagram,
-    .fa-github {
+    .fa-github,
+    .fa-circle-half-stroke {
         color: white;
-        flex-basis: 8%;
+        flex-basis: 25%;
     }
 
     .photos img {
@@ -150,6 +174,7 @@ footer {
     section p span {
         font-size: 10px;
         margin: 5px;
+        flex-basis: 4%;
     }
 
     footer p {
@@ -159,4 +184,8 @@ footer {
     main article div p {
         font-size: 10px;
     }
+}
+
+@media screen and (min-width: 1024px) {
+
 }
